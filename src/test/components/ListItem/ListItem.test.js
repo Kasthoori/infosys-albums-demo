@@ -3,11 +3,10 @@ import { shallow } from "enzyme";
 import ListItem from "../../../componenets/ListItem/ListItem";
 import toJson from "enzyme-to-json";
 
-const listOnClick = jest.fn();
 
 describe("ListItem", () => {
   let wrapper;
-  const item = {};
+
 
   beforeEach(() => (wrapper = shallow(<ListItem />)));
 
@@ -20,17 +19,10 @@ describe("ListItem", () => {
   });
 
 
-
-  const props = {
-    id:'', title: '', userId: ''
-  };
-
-  const renComp = shallow(<ListItem {...props} />);
-
-
   test('Click Event', () => {
-    expect(wrapper).toMatchSnapshot();
-    renComp.find('div.ListItem').simulate('onClick');
-    expect(wrapper).toMatchSnapshot();
+    const mockCall = jest.fn();
+    const listItem = shallow(<ListItem onClick={mockCall} />);
+    listItem.find('div.ListItem').simulate('click');
+    expect(mockCall.mock.calls.length).toEqual(1);
   });
 });

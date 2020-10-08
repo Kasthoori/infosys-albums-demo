@@ -1,9 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListItem Click Event 1`] = `ShallowWrapper {}`;
-
-exports[`ListItem Click Event 2`] = `ShallowWrapper {}`;
-
 exports[`ListItem ListItems renders witshout crashing 1`] = `
 <div
   className="ListItem"
