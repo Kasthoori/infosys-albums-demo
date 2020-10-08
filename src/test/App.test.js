@@ -6,7 +6,7 @@ import { cleanup, render, waitForElement } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import toJson from "enzyme-to-json";
 
-import App from "./App";
+import App from "../App";
 
 describe("App Testing", () => {
   let wrapper;

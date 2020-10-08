@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 import "@testing-library/jest-dom/extend-expect";
 import toJson from "enzyme-to-json";
 
-import Details from "./Details";
+import Details from "../Details";
 
 jest.mock("react-router-dom", () => ({
   useLocation: jest.fn().mockReturnValue({

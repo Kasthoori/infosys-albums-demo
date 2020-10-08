@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ListItem from "./ListItem";
+import ListItem from "../../../componenets/ListItem/ListItem";
 import toJson from "enzyme-to-json";
 
 const listOnClick = jest.fn();
