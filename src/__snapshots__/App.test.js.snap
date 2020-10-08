@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Testing renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <span
+    data-testid="loading"
+  >
+    <h4>
+      Loading.....
+    </h4>
+  </span>
+</div>
+`;
+
+exports[`App Testing should render correctly 1`] = `ShallowWrapper {}`;

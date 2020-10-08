@@ -1,0 +1,27 @@
+.ListItem {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.ListItem:hover {
+  background-color: #bdbdbd;
+  transition: 0.3s;
+}
+
+#number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#txt {
+  position: absolute;
+  left: 60px;
+}

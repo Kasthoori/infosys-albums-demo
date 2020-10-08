@@ -1,0 +1,65 @@
+.SuperContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TopBanner {
+  background-color: #bdbdbd;
+  border-radius: 10px;
+  width: 90%;
+  margin-top: 10px;
+  padding-left: 90px;
+}
+
+.MainContainer {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  /* padding-left: 100px; */
+  /* padding-right: 20px; */
+  justify-content: center;
+}
+
+.List {
+  width: 40%;
+}
+
+.LeftView {
+  /* border: 1px solid black; */
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+#albumimg {
+  width: 400px;
+  height: 400px;
+  margin-top: 1px;
+}
+
+#idtext {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+#titletext {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: grey;
+}
+
+#aid {
+  margin-top: -15px;
+}
+
+#uid {
+  margin-top: -10px;
+}
