@@ -16,7 +16,21 @@ describe("ListItem", () => {
   });
 
   it("ListItems renders witshout crashing", () => {
-    const cont = shallow(<ListItem />);
-    expect(toJson(cont)).toMatchSnapshot();
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+
+
+  const props = {
+    id:'', title: '', userId: ''
+  };
+
+  const renComp = shallow(<ListItem {...props} />);
+
+
+  test('Click Event', () => {
+    expect(wrapper).toMatchSnapshot();
+    renComp.find('div.ListItem').simulate('onClick');
+    expect(wrapper).toMatchSnapshot();
   });
 });

@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import "./App.css";
 import ListItem from "./componenets/ListItem/ListItem";
 
+
 const App = () => {
   const [albums, setAlbums] = useState([]);
   const [tracks, setTracks] = useState([]);
@@ -11,6 +12,8 @@ const App = () => {
 
   const url1 = "http://jsonplaceholder.typicode.com/albums";
   const url2 = "http://jsonplaceholder.typicode.com/photos";
+
+  document.title = 'Albums Available';
 
   useEffect(() => {
     async function fetchData() {
@@ -49,7 +52,7 @@ const App = () => {
   } else {
     return (
       <div className="App">
-        <h1>Albums Available</h1>
+        <h1>{document.title}</h1>
 
         <div className="List">
           <span data-testid="resolved">

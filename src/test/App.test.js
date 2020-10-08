@@ -7,6 +7,9 @@ import "@testing-library/jest-dom/extend-expect";
 import toJson from "enzyme-to-json";
 
 import App from "../App";
+import ListItem from "../componenets/ListItem/ListItem";
+
+
 
 describe("App Testing", () => {
   let wrapper;
@@ -40,14 +43,26 @@ describe("App Testing", () => {
   });
 
   it("renders without crashing", () => {
+
     const props = {
-      isFetching: false,
-      dispatch: jest.fn(),
-      selectedSubreddit: "reactjs",
-      posts: [],
+      status: false,
     };
 
-    const cont = shallow(<App {...props} />);
+    const cont = shallow(<App {...props} status='false' />);
     expect(toJson(cont)).toMatchSnapshot();
   });
+
+
+  test('Test document title', () => {
+    expect(global.window.document.title).toBe('Albums Available');
+  });
+
+  test('Search ListItem component', () => {
+    const id = '';
+    const comp = shallow(<ListItem  />);
+    expect(comp.exists()).toBe(true);
+  });
+
+  
+
 });
