@@ -30,6 +30,11 @@ describe("App Testing", () => {
     expect(resolvedSpan).toHaveTextContent("a6natus");
   });
 
+  it("renders without crashing", () => {
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+
   it("should render correctly", () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -41,17 +46,6 @@ describe("App Testing", () => {
   it("should render a <span />", () => {
     expect(wrapper.find("span").length).toEqual(1);
   });
-
-  it("renders without crashing", () => {
-
-    const props = {
-      status: false,
-    };
-
-    const cont = shallow(<App {...props} status='false' />);
-    expect(toJson(cont)).toMatchSnapshot();
-  });
-
 
   test('Test document title', () => {
     expect(global.window.document.title).toBe('Albums Available');
